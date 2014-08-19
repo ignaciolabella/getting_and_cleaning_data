@@ -144,5 +144,5 @@ A<-rbind(A,A5)
 A6 <- apply(x_merged_mean_and_std[x_merged_mean_and_std_activ[,88]=="LAYING",],2,mean)
 A<-rbind(A,A6)
 AA<-cbind(A,c("WALKING","WALKING_UPSTAIRS","WALKING_DOWNSTAIRS","SITTING","STANDING","LAYING"))
-write.csv(AA,"./tidydata_5.txt")
-
+#write.csv(AA,"./tidydata_5.txt")
+write.table(AA,"tidydata_5.txt",quote=FALSE,row.names=FALSE)
