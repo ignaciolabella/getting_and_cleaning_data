@@ -123,7 +123,8 @@ x_merged_mean_and_std_activ<-cbind(x_merged_mean_and_std,y_merged_factor)
 #===========================================================================================
 feat_heads <-as.vector(features[ind,2])
 names(x_merged_mean_and_std_activ) <- c(feat_heads,"activ_desc")
-write.csv(x_merged_mean_and_std_activ,"./tidydata_1_to_4.txt")
+#write.csv(x_merged_mean_and_std_activ,"./tidydata_1_to_4.txt")
+write.table(x_merged_mean_and_std_activ,"./tidydata_1_to_4.txt",quote=FALSE,row.names=FALSE)
 
 #===========================================================================================
 #5.- Creates a second, independent tidy data set with the average of each variable
